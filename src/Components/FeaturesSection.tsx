@@ -3,18 +3,18 @@ import { Box, Container, Grid, Paper, Typography, useTheme } from "@mui/material
 const features = [
   {
     emoji: "🎨",
-    title: "絵文字ミックスで創作",
+    title: "絵文字ゲームで創作",
     description: "2つの絵文字を組み合わせて、オリジナルの絵文字スタンプを作ろう！"
   },
   {
     emoji: "✨",
     title: "無限の組み合わせ",
-    description: "何千もの組み合わせパターンから、あなただけの絵文字を見つけよう！"
+    description: "絵文字ミックスゲームで何千もの組み合わせパターンを楽しもう！"
   },
   {
     emoji: "💫",
     title: "簡単操作",
-    description: "クリック2回で新しい絵文字の出来上がり！誰でも簡単に使えます。"
+    description: "クリック2回で新しい絵文字の出来上がり！誰でも簡単に絵文字ゲームを楽しめます。"
   },
   {
     emoji: "📱",
@@ -56,7 +56,7 @@ const FeaturesSection = () => {
             color: theme.palette.primary.main,
           }}
         >
-          絵文字ミックスの特徴
+          絵文字ミックスゲームの特徴
         </Typography>
 
         <Grid container spacing={3}>
@@ -128,8 +128,8 @@ const FeaturesSection = () => {
             mx: 'auto'
           }}
         >
-          絵文字ミックスを使えば、コミュニケーションがもっと楽しく、もっと表現豊かになります。
-          新しい絵文字で、あなたの気持ちを伝えてみませんか？
+          絵文字ミックスゲームを使えば、コミュニケーションがもっと楽しく、もっと表現豊かになります。
+          新しい絵文字ゲームで、あなたの気持ちを伝えてみませんか？
         </Typography>
       </Container>
     </Box>

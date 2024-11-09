@@ -47,7 +47,7 @@ const Introduction = () => {
               lineHeight: 1.3
             }}
           >
-            絵文字ミックス
+            Google 絵文字ミックス
             <Typography 
               component="span" 
               sx={{ 
@@ -58,7 +58,7 @@ const Introduction = () => {
                 mt: 1
               }}
             >
-              楽しい絵文字の組み合わせツール
+              Googleが提供する楽しい絵文字の組み合わせツール
             </Typography>
           </Typography>
 
@@ -72,8 +72,8 @@ const Introduction = () => {
               color: (theme) => theme.palette.text.secondary
             }}
           >
-            オリジナルの絵文字を作って、チャットをもっと楽しく！
-            2つの絵文字を組み合わせて、世界に一つだけの絵文字を作ることができます。
+            Google絵文字ミックスで、オリジナルの絵文字を作ってチャットをもっと楽しく！
+            Google提供の絵文字キッチンを使って、2つの絵文字を組み合わせて、世界に一つだけの絵文字を作ることができます。
           </Typography>
 
           {/* 使用步骤 */}
@@ -155,7 +155,7 @@ const Introduction = () => {
             }}
           >
             <span role="img" aria-label="sparkles">✨</span>
-            Google の Emoji Kitchen で何千もの組み合わせを楽しもう！
+            絵文字ミックスは、Googleの技術を活用した無料のツールです。何千もの組み合わせを楽しもう！
           </Typography>
         </Box>
       </Paper>

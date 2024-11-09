@@ -3,11 +3,11 @@ import { Box, Container, Grid, Paper, Typography, useTheme } from "@mui/material
 const tips = [
   {
     emoji: "🎯",
-    title: "組み合わせのコツ",
+    title: "絵文字ゲームの組み合わせコツ",
     tips: [
       "似ている絵文字を組み合わせると、面白い結果に！",
       "反対の意味の絵文字で意外な発見も",
-      "季節の絵文字で旬な表現を作ろう"
+      "絵文字ミックスゲームで季節感を表現"
     ]
   },
   {
@@ -16,7 +16,7 @@ const tips = [
     tips: [
       "感情を表す絵文字同士で新しい感情を表現",
       "動物と食べ物で可愛いキャラクターに",
-      "天気の絵文字で様々な表情を作れます"
+      "絵文字ゲームで様々な表情を作れます"
     ]
   },
   {
@@ -62,7 +62,7 @@ const GameTips = () => {
             color: theme.palette.primary.main,
           }}
         >
-          絵文字ミックスを楽しむコツ
+          絵文字ミックスゲームを楽しむコツ
         </Typography>
 
         <Typography
@@ -75,7 +75,7 @@ const GameTips = () => {
             mx: 'auto'
           }}
         >
-          もっと楽しく！もっと便利に！絵文字ミックスの活用テクニック
+          もっと楽しく！もっと便利に！絵文字ゲームの新しい遊び方
         </Typography>
 
         <Grid container spacing={3}>
@@ -207,8 +207,8 @@ const GameTips = () => {
             mx: 'auto'
           }}
         >
-          絵文字ミックスの可能性は無限大！
-          あなただけの素敵な組み合わせを見つけて、コミュニケーションをもっと楽しく豊かにしましょう。
+          絵文字ミックスゲームの可能性は無限大！
+          あなただけの素敵な組み合わせを見つけて、新しい絵文字ゲームの世界を楽しみましょう。
         </Typography>
       </Container>
     </Box>
