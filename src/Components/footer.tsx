@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Link, Typography, useTheme } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link as RouterLink } from 'react-router-dom';
 
 const navigationLinks = [
   { name: "メディア掲載", href: "/media" },
@@ -135,25 +136,21 @@ const Footer = () => {
             }}
           >
             {navigationLinks.map((link, index) => (
-              <Link
+              <RouterLink
                 key={index}
-                href={link.href}
-                sx={{
+                to={link.href}
+                style={{
                   display: 'inline-block',
-                  color: theme.palette.text.secondary,
+                  color: theme.palette.text.secondary.toString(),
                   textDecoration: 'none',
-                  fontSize: { xs: '0.875rem', sm: '1rem' },
+                  fontSize: '1rem',
                   fontWeight: 500,
                   transition: 'color 0.2s',
-                  pr: { sm: 3, lg: 6 },
-                  py: { xs: 0.75, sm: 1 },
-                  '&:hover': {
-                    color: theme.palette.primary.main,
-                  },
+                  padding: '0.75rem 1.5rem',
                 }}
               >
                 {link.name}
-              </Link>
+              </RouterLink>
             ))}
           </Box>
 

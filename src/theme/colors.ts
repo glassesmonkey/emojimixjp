@@ -1,0 +1,33 @@
+import {
+  amber,
+  blue,
+  cyan,
+  deepOrange,
+  deepPurple,
+  green,
+  indigo,
+  lightBlue,
+  lightGreen,
+  lime,
+  orange,
+  pink,
+  purple,
+  teal,
+} from "@mui/material/colors";
+
+export const colors = [
+  amber,
+  blue,
+  cyan,
+  deepOrange,
+  deepPurple,
+  green,
+  indigo,
+  lightBlue,
+  lightGreen,
+  lime,
+  orange,
+  pink,
+  purple,
+  teal,
+]; 
