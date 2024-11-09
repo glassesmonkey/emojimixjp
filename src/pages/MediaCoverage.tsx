@@ -2,19 +2,15 @@ import { Box, Container, Typography, Grid, Card, CardContent, Link, useTheme } f
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const coverageLinks = [
+ 
   { 
-    title: "Emoji Kitchen 使用指南", 
-    url: "https://telegra.ph/Block-Blast-Solver-Instructions-11-01" 
+    title: "Ludoking での紹介", 
+    url: "https://forum.ludoking.com/index.php?board=7.0" 
   },
   { 
-    title: "絵文字ミックス紹介", 
-    url: "https://plaza.rakuten.co.jp/pdlalex/diary/202411020000/" 
-  },
-  { 
-    title: "HiNative での紹介", 
-    url: "https://zh.hinative.com/questions/26356178" 
-  },
-  // 可以继续添加更多链接...
+    title: "Plarium での紹介", 
+    url: "https://forum.plarium.com/en/throne-kingdom-at-war/598_general-questions/122557_assailant-studies/?anchorId=1775338" 
+  }
 ];
 
 const MediaCoverage = () => {
