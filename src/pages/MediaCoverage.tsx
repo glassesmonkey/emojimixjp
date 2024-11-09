@@ -1,0 +1,106 @@
+import { Box, Container, Typography, Grid, Card, CardContent, Link, useTheme } from "@mui/material";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
+const coverageLinks = [
+  { 
+    title: "Emoji Kitchen 使用指南", 
+    url: "https://telegra.ph/Block-Blast-Solver-Instructions-11-01" 
+  },
+  { 
+    title: "絵文字ミックス紹介", 
+    url: "https://plaza.rakuten.co.jp/pdlalex/diary/202411020000/" 
+  },
+  { 
+    title: "HiNative での紹介", 
+    url: "https://zh.hinative.com/questions/26356178" 
+  },
+  // 可以继续添加更多链接...
+];
+
+const MediaCoverage = () => {
+  const theme = useTheme();
+
+  return (
+    <Container maxWidth="lg" sx={{ py: 8 }}>
+      <Box sx={{ textAlign: 'center', mb: 8 }}>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: { xs: '2rem', md: '3rem' },
+            fontWeight: 700,
+            mb: 4,
+            background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
+          メディア掲載
+        </Typography>
+        
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: { xs: '1.2rem', md: '1.5rem' },
+            color: theme.palette.text.secondary,
+            maxWidth: '800px',
+            mx: 'auto',
+            mb: 6,
+          }}
+        >
+          絵文字ミックスに関する記事やメディアでの紹介をご覧いただけます
+        </Typography>
+      </Box>
+
+      <Grid container spacing={3}>
+        {coverageLinks.map((link, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: theme.shadows[4],
+                },
+              }}
+            >
+              <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: '1.25rem',
+                    fontWeight: 600,
+                    mb: 2,
+                  }}
+                >
+                  {link.title}
+                </Typography>
+                <Link
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    color: theme.palette.primary.main,
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                    },
+                  }}
+                >
+                  記事を読む
+                  <OpenInNewIcon sx={{ ml: 0.5, fontSize: '1rem' }} />
+                </Link>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+
+export default MediaCoverage; 

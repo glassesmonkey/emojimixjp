@@ -28,6 +28,13 @@ import Search from "./search";
 import RightEmojiList from "./right-emoji-list";
 import LeftEmojiList from "./left-emoji-list";
 import MobileEmojiList from "./mobile-emoji-list";
+import ShareIcon from '@mui/icons-material/Share';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 export default function Kitchen() {
   // Selection helpers
@@ -59,6 +66,8 @@ export default function Kitchen() {
   const [leftUuid, setLeftUuid] = useState<string>(uuidv4());
   const [rightUuid, setRightUuid] = useState<string>(uuidv4());
   const [mobileUuid, setMobileUuid] = useState<string>(uuidv4());
+
+  const [shareAnchorEl, setShareAnchorEl] = useState<null | HTMLElement>(null);
 
   /**
    * 📱 Mobile handler to naively detect if we're on a phone or not
@@ -328,6 +337,43 @@ export default function Kitchen() {
       .catch(function (error) {
         console.log(error);
       });
+  };
+
+  const handleShareClick = (event: React.MouseEvent<HTMLElement>) => {
+    setShareAnchorEl(event.currentTarget);
+  };
+
+  const handleShareClose = () => {
+    setShareAnchorEl(null);
+  };
+
+  const generateShareText = () => {
+    const leftEmoji = getEmojiData(selectedLeftEmoji).alt;
+    const rightEmoji = getEmojiData(selectedRightEmoji).alt;
+    return `${leftEmoji} + ${rightEmoji} で新しい絵文字を作ってみました！\n#EmojiKitchen\n`;
+  };
+
+  const handleShare = async (platform: string) => {
+    const shareText = generateShareText();
+    const combination = getEmojiData(selectedLeftEmoji).combinations[selectedRightEmoji].filter(c => c.isLatest)[0];
+    const imageUrl = combination.gStaticUrl;
+    
+    switch(platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(window.location.href)}&image=${encodeURIComponent(imageUrl)}`);
+        break;
+      case 'line':
+        window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(shareText + '\n' + imageUrl)}`);
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(shareText)}`);
+        break;
+      case 'instagram':
+        alert('画像を保存して、Instagramでシェアしてください。\n(Save the image and share it on Instagram)');
+        handleImageDownload();
+        break;
+    }
+    handleShareClose();
   };
 
   // See: https://caniuse.com/async-clipboard
@@ -674,6 +720,47 @@ export default function Kitchen() {
                       >
                         <ContentCopy fontSize="small" />
                       </IconButton>
+                      <IconButton onClick={handleShareClick}>
+                        <ShareIcon />
+                      </IconButton>
+                      
+                      <Menu
+                        anchorEl={shareAnchorEl}
+                        open={Boolean(shareAnchorEl)}
+                        onClose={handleShareClose}
+                      >
+                        <MenuItem onClick={() => handleShare('twitter')}>
+                          <ListItemIcon>
+                            <TwitterIcon fontSize="small" />
+                          </ListItemIcon>
+                          <ListItemText>Twitter でシェア</ListItemText>
+                        </MenuItem>
+                        
+                        <MenuItem onClick={() => handleShare('line')}>
+                          <ListItemIcon>
+                            <img 
+                              src="/line-icon.png" 
+                              alt="LINE"
+                              style={{ width: 20, height: 20 }}
+                            />
+                          </ListItemIcon>
+                          <ListItemText>LINE でシェア</ListItemText>
+                        </MenuItem>
+                        
+                        <MenuItem onClick={() => handleShare('instagram')}>
+                          <ListItemIcon>
+                            <InstagramIcon fontSize="small" />
+                          </ListItemIcon>
+                          <ListItemText>Instagram でシェア</ListItemText>
+                        </MenuItem>
+                        
+                        <MenuItem onClick={() => handleShare('facebook')}>
+                          <ListItemIcon>
+                            <FacebookIcon fontSize="small" />
+                          </ListItemIcon>
+                          <ListItemText>Facebook でシェア</ListItemText>
+                        </MenuItem>
+                      </Menu>
                     </Stack>
                   </Grid>
                 </Grid>
@@ -896,6 +983,47 @@ export default function Kitchen() {
               <IconButton onClick={(_) => handleImageCopy()}>
                 <ContentCopy />
               </IconButton>
+              <IconButton onClick={handleShareClick}>
+                <ShareIcon />
+              </IconButton>
+              
+              <Menu
+                anchorEl={shareAnchorEl}
+                open={Boolean(shareAnchorEl)}
+                onClose={handleShareClose}
+              >
+                <MenuItem onClick={() => handleShare('twitter')}>
+                  <ListItemIcon>
+                    <TwitterIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText>Twitter でシェア</ListItemText>
+                </MenuItem>
+                
+                <MenuItem onClick={() => handleShare('line')}>
+                  <ListItemIcon>
+                    <img 
+                      src="/line-icon.png" 
+                      alt="LINE"
+                      style={{ width: 20, height: 20 }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText>LINE でシェア</ListItemText>
+                </MenuItem>
+                
+                <MenuItem onClick={() => handleShare('instagram')}>
+                  <ListItemIcon>
+                    <InstagramIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText>Instagram でシェア</ListItemText>
+                </MenuItem>
+                
+                <MenuItem onClick={() => handleShare('facebook')}>
+                  <ListItemIcon>
+                    <FacebookIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText>Facebook でシェア</ListItemText>
+                </MenuItem>
+              </Menu>
             </Container>
           ) : null}
 

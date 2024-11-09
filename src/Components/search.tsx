@@ -92,7 +92,7 @@ export default function Search({
         </IconButton>
         <InputBase
           sx={{ ml: 1, flex: 1 }}
-          placeholder="Search Emoji"
+          placeholder="絵文字を検索"
           value={value}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
             setValue(event.target.value);
@@ -133,7 +133,7 @@ export default function Search({
       </IconButton>
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search Emoji"
+        placeholder="絵文字を検索"
         value={value}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           setValue(event.target.value);
