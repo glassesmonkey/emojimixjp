@@ -27,4 +27,4 @@ All application deployments are managed via GitHub Actions and the [`./.github/w
 
 Additionally, application dependencies are automatically managed and updated via Dependabot and the [`./.github/workflows/automerge-dependabot.yml`](./.github/workflows/automerge-dependabot.yml) workflow.
 
-[demo](https://emojikitchen.dev).
+[demo](https://emojimix.online).
