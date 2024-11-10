@@ -22,6 +22,22 @@ const coverageLinks = [
   { 
     title: "Ngames での紹介", 
     url: "https://forums.ngames.com/forum/league-of-angels/community-ab/general-discussion-ab/37839-the-best-emoji-mix-game-recommend" 
+  },
+  { 
+    title: "Pokemon Pets での紹介", 
+    url: "https://forum.pokemonpets.com/Thread-A-emoji-game-recommend" 
+  },
+  { 
+    title: "Pcmdaily での紹介", 
+    url: "https://www.pcmdaily.com/news.php?readmore=1124&c_start=0" 
+  },
+  { 
+    title: "Wowgilden での紹介", 
+    url: "https://espritgames.com/forum/topic/777score-2/#post-236144" 
+  },
+  { 
+    title: "Github での紹介", 
+    url: "https://github.com/glassesmonkey/emojimixjp/tree/main" 
   }
 ];
 
