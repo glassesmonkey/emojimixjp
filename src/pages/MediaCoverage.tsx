@@ -10,6 +10,18 @@ const coverageLinks = [
   { 
     title: "Plarium での紹介", 
     url: "https://forum.plarium.com/en/throne-kingdom-at-war/598_general-questions/122557_assailant-studies/?anchorId=1775338" 
+  },
+  { 
+    title: "The Lazy での紹介", 
+    url: "https://sfx.thelazy.net/forum/troubleshooting/9497/" 
+  },
+  { 
+    title: "BIS での紹介", 
+    url: "https://feedback.bistudio.com/T185279" 
+  },
+  { 
+    title: "Ngames での紹介", 
+    url: "https://forums.ngames.com/forum/league-of-angels/community-ab/general-discussion-ab/37839-the-best-emoji-mix-game-recommend" 
   }
 ];
 
