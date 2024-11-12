@@ -42,6 +42,10 @@ const coverageLinks = [
   { 
     title: "Nasomi での紹介", 
     url: "https://na.nasomi.com/forum/viewtopic.php?f=42&t=4805&sid=d6eeaba2dd029a66b96768ff1a5f3183" 
+  },
+  { 
+    title: "V2EX での紹介", 
+    url: "https://www.v2ex.com/t/1088743" 
   }
 ];
 
