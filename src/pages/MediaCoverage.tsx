@@ -46,6 +46,10 @@ const coverageLinks = [
   { 
     title: "V2EX での紹介", 
     url: "https://www.v2ex.com/t/1088743" 
+  },
+  { 
+    title: "Castbox での紹介", 
+    url: "https://castbox.fm/episode/4%3A-The-Superstar-id6335315-id749152422?country=us" 
   }
 ];
 
