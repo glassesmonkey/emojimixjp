@@ -24,7 +24,7 @@ const Terms = () => {
           1. サービスの概要
         </Typography>
         <Typography sx={{ mb: 2 }}>
-          当サービスは、Google社が提供するEmoji Kitchenの機能を利用して、絵文字の組み合わせを作成できるWebアプリケーションです。
+          当サービスは、革新的な技術を活用して、絵文字の組み合わせを作成できるWebアプリケーションです。
         </Typography>
         <Typography sx={{ mb: 4 }}>
           すべての処理はユーザーのブラウザ上で実行され、個人情報の収集は一切行いません。
@@ -63,7 +63,7 @@ const Terms = () => {
           • サービスの内容は予告なく変更または終了する場合があります
         </Typography>
         <Typography sx={{ mb: 2 }}>
-          • Emoji Kitchenの機能はGoogle社により提供されており、その仕様変更や提供終了の可能性があります
+          • 絵文字ミックスの機能は外部技術により提供されており、その仕様変更や提供終了の可能性があります
         </Typography>
       </Box>
     </Container>

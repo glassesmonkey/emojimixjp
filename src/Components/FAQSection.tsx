@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const faqs = [
   {
     question: "絵文字ミックスとは何ですか？",
-    answer: "絵文字ミックスは、2つの絵文字を組み合わせて新しい絵文字を作れるツールです。Google が開発した Emoji Kitchen の技術を使用しており、何千もの組み合わせを楽しむことができます。"
+    answer: "絵文字ミックスは、2つの絵文字を組み合わせて新しい絵文字を作れるツールです。革新的な技術により、何千もの組み合わせを楽しむことができます。"
   },
   {
     question: "作った絵文字はどうやって保存できますか？",
