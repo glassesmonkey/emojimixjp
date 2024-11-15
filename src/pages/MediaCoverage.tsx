@@ -50,6 +50,18 @@ const coverageLinks = [
   { 
     title: "Castbox での紹介", 
     url: "https://castbox.fm/episode/4%3A-The-Superstar-id6335315-id749152422?country=us" 
+  },
+  { 
+    title: "MySportsGo での紹介", 
+    url: "https://www.mysportsgo.com/forums/topic/148795/cach-tim-link-fun88-uy-tin-khong-lo-bi-chan/view/post_id/1130925/page/1#siteforum_post_1130925" 
+  },
+  { 
+    title: "FPGeeks での紹介", 
+    url: "https://fpgeeks.com/forum/showthread.php/41715-What-is-Passwordle-game?p=432371#post432371" 
+  },
+  { 
+    title: "GEA での紹介", 
+    url: "https://webinar.gea.com/gea09ammoniadavidchristine3mp4" 
   }
 ];
 
